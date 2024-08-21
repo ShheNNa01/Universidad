@@ -11,16 +11,16 @@ longitud3 = len(palabra3)
 longitud4 = len(palabra4)
 
 # Compara las longitudes para encontrar la mayor
-mayor_palabra = palabra1
+PalabraMasLarga = palabra1
 
-if longitud2 > len(mayor_palabra):
-    mayor_palabra = palabra2
+if longitud2 > len(PalabraMasLarga):
+    PalabraMasLarga = palabra2
 
-if longitud3 > len(mayor_palabra):
-    mayor_palabra = palabra3
+if longitud3 > len(PalabraMasLarga):
+    PalabraMasLarga = palabra3
 
-if longitud4 > len(mayor_palabra):
-    mayor_palabra = palabra4
+if longitud4 > len(PalabraMasLarga):
+    PalabraMasLarga = palabra4
 
 # Mostramos en consola cual seria la palabra mas larga despues de la validacion dela parte logica 
-print("La palabra con mayor longitud es:", mayor_palabra)
+print("La palabra con mayor longitud es:", PalabraMasLarga)

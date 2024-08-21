@@ -1,13 +1,18 @@
-#Procedemos a solicitar la informacion al usuario
-print("Bienvenido al programa de validacion de pensiones")
+print("Bienvenido al programa de validación de pensiones")
 nombre = input("Ingrese su nombre: ")
-edad = input("Por favor ingrese su edad: ")
-genero = input("Por favor ingrese su genero (MASCULINO O FEMENINO)")
+edad = int(input("Por favor ingrese su edad: "))
+genero = input("Por favor ingrese su género (M para masculino y F para femenino): ").upper()
 
-#hacemos la validacion del proceso segun la edad y el genero
-if edad >= 65 and genero == "MASCULINO":
+# Hacemos la validación del proceso según la edad y el género
+if edad >= 60 and genero == "M":
     print(f"El señor {nombre} es pensionado")
-elif edad >= 60 and genero == "FEMENINO":
+elif edad >= 62 and genero == "F":
     print(f"La señora {nombre} es pensionada")
 else:
-    print(f"El señor/a {nombre} no es pensionado/a")
+    if genero == "M":
+        print(f"El señor {nombre} no es pensionado")
+    elif genero == "F":
+        print(f"La señora {nombre} no es pensionada")
+    else:
+        print(f"{nombre}, el género ingresado no es válido.")
+
