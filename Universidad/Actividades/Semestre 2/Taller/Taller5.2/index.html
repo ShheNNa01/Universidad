@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>CONSULTAS</h1>
+    <section>
+        <h2>1. Consulte qué son los arrays y explique en qué se diferencian los arrays de los objetos.</h2>
+        <article>
+            <h3>Arrays:</h3>
+            <p>Son estructuras de datos que almacenan una colección ordenada de elementos. Los elementos en un array son accesibles mediante un índice numérico, comenzando desde 0. Los arrays pueden contener cualquier tipo de dato y permiten operaciones eficientes sobre los elementos, como acceso, inserción y eliminación.</p>
+            <h3>Objetos:</h3>
+            <p>Son estructuras de datos que almacenan colecciones de pares clave-valor. Las claves suelen ser cadenas de texto, y cada clave está asociada a un valor. Los objetos no tienen un orden específico de los elementos y se utilizan principalmente para representar entidades complejas con propiedades y comportamientos.</p>
+            <h3>Diferencias:</h3>
+            <h4>Acceso a los Elementos:</h4>
+            <p>En los arrays se accede mediante índices numéricos (ej. array[0]), mientras que en los objetos se accede mediante claves (ej. objeto['clave']).</p>
+            <h4>Orden:</h4>
+            <p>Los arrays mantienen el orden de los elementos, mientras que los objetos no garantizan un orden específico.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>2. Menciona por lo menos 1 propiedad y 3 funciones que tienen integrados los arrays. Realice un ejemplo de cada uno.</h2>
+        <article>
+            <h3>Propiedad:</h3>
+            <h4>length:</h4>
+            <p>La propiedad length te da la cantidad de elementos en un array.</p>
+            <h4>Ejemplo:</h4>
+            <script>
+                let frutas1 = ["Manzana", "Banana"];
+                document.write(frutas1 + "<br>");
+                document.write("Cantidad de elementos en frutas1: " + frutas1.length + "<br>");
+            </script>
+
+            <h3>Funciones:</h3>
+            <h4>push():</h4>
+            <p>Añade un elemento al final del array.</p>
+            <h4>Ejemplo 1:</h4>
+            <script>
+                let frutas2 = ["Manzana", "Banana"];
+                document.write("Antes de push : ");
+                document.write(frutas2 + "<br>");
+                frutas2.push("Naranja");
+                document.write("Después de push: " + "<br>" + frutas2 + "<br>");
+            </script>
+
+            <h4>pop():</h4>
+            <p>Elimina el último elemento del array.</p>
+            <h4>Ejemplo 2:</h4>
+            <script>
+                let frutas3 = ["Manzana", "Banana", "Naranja"];
+                let ultimo = frutas3.pop();
+                document.write("Después de pop: " + frutas3 + "<br>");
+            </script>
+
+            <h4>unshift():</h4>
+            <p>Añade un elemento al principio del array.</p>
+            <h4>Ejemplo 3:</h4>
+            <script>
+                let frutas4 = ["Manzana", "Banana"];
+                frutas4.unshift("Fresa");
+                document.write("Después de unshift: " + frutas4 + "<br>");
+            </script>
+        </article>
+    </section>
+
+    <section>
+        <h2>3. Realiza 1 ejercicio explicando cómo funcionan los métodos push(), pop(), slice() y splice(), reduce(), indexOf(), forEach(), map(), sort(). </h2>
+        <article>
+            <h3>Explicación de métodos de arrays en JavaScript</h3>
+            <p>let array = [1, 2, 3, 4, 5];</p>
+            <hr>
+            <p>Método push(): añade un elemento al final del array</p>
+            <p>array.push(6);</p>
+            <hr>
+            <p>Método pop(): elimina el último elemento del array</p>
+            <p>array.pop();</p>
+            <hr>
+            <p>Método slice(): devuelve una copia superficial de una parte del array</p>
+            <p>let slicedArray = array.slice(1, 3);</p>
+            <hr>
+            <p>Método splice(): añade o elimina elementos en cualquier posición del array</p>
+            <p>array.splice(2, 1, 'a', 'b');</p>
+            <hr>
+            <p>Método reduce(): aplica una función contra un acumulador y cada elemento del array</p>
+            <p>let sum = array.reduce((acc, val) => typeof val === 'number' ? acc + val : acc, 0);</p>
+            <hr>
+            <p>Método indexOf(): devuelve el primer índice en el que se encuentra un elemento dado</p>
+            <p>let index = array.indexOf(3);</p>
+            <hr>
+            <p>Método forEach(): ejecuta una función para cada elemento del array</p>
+            <p>let forEachOutput = [];
+            array.forEach((val) => forEachOutput.push(val));</p>
+            <hr>
+            <p>Método map(): crea un nuevo array con los resultados de aplicar una función a cada elemento</p>
+            <p>let mappedArray = array.map(val => typeof val === 'number' ? val * 2 : val);</p>
+            <hr>
+            <p>Método sort(): ordena los elementos del array y devuelve el array</p>
+            <p>let sortedArray = array.slice().sort(); // Usamos slice() para no modificar el array original</p>
+            <hr>
+        </article>
+    </section>
+    
+    <a href="segunda parte del taller.html"><h2>Continuación de taller</a></h2>
+    
+</body>
+
+</html>
+
